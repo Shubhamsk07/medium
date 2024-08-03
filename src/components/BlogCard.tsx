@@ -45,7 +45,7 @@ function Circle(){
     return <div className="rounded-full bg-slate-500 w-1 h-1"></div>
 }
 
-export function Avatar({ name,size="small" }: { name: string,size:"small"| "big" }) {
+export function Avatar({ name,size="small" }: { name: string,size?:"small"| "big" }) {
     return <div className={`inline-flex items-center justify-center relative overflow-hidden ${size==="small"?"w-6 h-6":"w-10 h-10"} overflos-hidden bg-gray-100 rounded-full dark:bg-gray-600`}>
         <span className={`font-medium text-gray-600 ${size=="small"?"text-xs":"text-md"} dark:text-gray-300`}>
             {name[0]}

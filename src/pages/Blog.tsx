@@ -3,9 +3,11 @@ import { useBlog } from '../hooks'
 import { useParams } from 'react-router-dom';
 import { BlogPage } from '../components/BlogPage';
 
+
+
 export const Blog = () => {
-  const {id} =useParams();
-  console.log("this is a id",id)
+  const {id} =useParams<{id:string}>();
+  
   const {loading,blog} = useBlog({
     id: id || ""
   });
@@ -42,7 +44,8 @@ export const Blog = () => {
 
   return (
     <div>
-      <BlogPage id={id} blog= {blog} />
+      {/* @ts-ignore */}
+      <BlogPage id={id || ''} blog= {blog } />
     </div>
   )
 }

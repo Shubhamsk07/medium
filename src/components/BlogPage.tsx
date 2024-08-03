@@ -7,7 +7,7 @@ import { BACKEND_URL } from "../config"
 
 export const BlogPage = ({ blog,id }: { blog: Blog,id:string }) => {
     const navigate = useNavigate()
-console.log("name",blog)
+
 const handleDelete = async () => {
         try {
             await axios.delete(`${BACKEND_URL}/api/v1/blog/${id}`, {
