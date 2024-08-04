@@ -25,11 +25,12 @@ export const Auth = ({type}:{type:"signup"|"signin"})=>{
             setLoading(false)
         }catch(e){
             {type==="signup"?alert("Error while signing up"):alert("Error while signing in")}
+            setLoading(false)
             
         }
     }
 return(
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col justify-center max-md:px-3">
     <div className="flex justify-center ">
         <div className="w-96 ">
         <div className="font-extrabold text-center  text-3xl">
